@@ -9,7 +9,7 @@
 int stop=0;//传输终止指令（不会别的方法，就只能想到这样了555） 
 int direction=90;//蛇的方向，让玩家未操作时也会移动 
 int tick=1;//游戏刻，0.05s 
-int rate=1;//刷新率`
+float rate=0.1;//刷新率`
 int length=0;//蛇的长度 
 char map[41][21];//游戏地图 
 int longer=0;//判断是否可增长，以及增长量 
@@ -313,7 +313,7 @@ food=1;//食物数量
 		tmp=keyboard_listen(head);//头移动缓冲区 
 		print_map(map);//打印地图
 //		printf("%d %d",head.x,head.y);
-		printf("  rate=%d  score=%d  food=%d",rate,length,food);
+		printf("  rate=%f  score=%d  food=%d",rate,length,food);
 
 		
 		
